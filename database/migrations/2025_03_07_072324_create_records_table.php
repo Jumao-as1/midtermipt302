@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('records', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('genre');
+            $table->integer('release_year');
+            $table->string('developer');
             $table->text('description');
-            $table->string('author');
-            $table->date('published_at');
-            $table->integer('views')->default(0);
             $table->timestamps();
         });
     }

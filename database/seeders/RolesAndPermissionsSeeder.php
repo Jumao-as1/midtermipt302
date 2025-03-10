@@ -29,7 +29,7 @@ class RolesAndPermissionsSeeder extends Seeder
         $adminUser = User::firstOrCreate([
             'email' => 'admin@example.com'
         ], [
-            'name' => 'Admin User',
+            'name' => 'Administrator',
             'password' => Hash::make('admin123')
         ]);
 
@@ -39,7 +39,7 @@ class RolesAndPermissionsSeeder extends Seeder
         $regularUser = User::firstOrCreate([
             'email' => 'user@example.com'
         ], [
-            'name' => 'Regular User',
+            'name' => 'Data Entry',
             'password' => Hash::make('user123')
         ]);
 

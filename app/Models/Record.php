@@ -10,7 +10,6 @@ class Record extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title', 'description', 'author', 'published_at', 'views'
+        'title', 'genre', 'release_year', 'developer', 'description'
     ];
 }
-

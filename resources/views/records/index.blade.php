@@ -1,18 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Records</h1>
+<h1>Game Records</h1>
 
 @can('create record')
-    <a href="{{ route('records.create') }}" class="btn btn-primary mb-3">Create New Record</a>
+    <a href="{{ route('records.create') }}" class="btn btn-primary mb-3">Create Game New Record</a>
 @endcan
 
 <table class="table table-bordered">
     <thead>
         <tr>
             <th>Title</th>
-            <th>Author</th>
-            <th>Published Date</th>
+            <th>Genre</th>
+            <th>Release Year</th>
+            <th>Developer</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -20,8 +21,9 @@
         @foreach($records as $record)
         <tr>
             <td>{{ $record->title }}</td>
-            <td>{{ $record->author }}</td>
-            <td>{{ $record->published_at }}</td>
+            <td>{{ $record->genre }}</td>
+            <td>{{ $record->release_year }}</td>
+            <td>{{ $record->developer }}</td>
             <td>
                 @can('edit record')
                     <a href="{{ route('records.edit', $record) }}" class="btn btn-sm btn-warning">Edit</a>

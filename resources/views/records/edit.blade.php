@@ -10,17 +10,20 @@
         <input type="text" name="title" class="form-control" value="{{ $record->title }}" required>
     </div>
     <div class="mb-3">
+        <label>Genre</label>
+        <input type="text" name="genre" class="form-control" value="{{ $record->genre }}" required>
+    </div>
+    <div class="mb-3">
+        <label>Release Year</label>
+        <input type="number" name="release_year" class="form-control" value="{{ $record->release_year }}" required>
+    </div>
+    <div class="mb-3">
+        <label>Developer</label>
+        <input type="text" name="developer" class="form-control" value="{{ $record->developer }}" required>
+    </div>
+    <div class="mb-3">
         <label>Description</label>
         <textarea name="description" class="form-control" required>{{ $record->description }}</textarea>
-    </div>
-    <div class="mb-3">
-        <label>Author</label>
-        <input type="text" name="author" class="form-control" value="{{ $record->author }}" required>
-    </div>
-    <div class="mb-3">
-        <label>Published Date</label>
-        <input type="date" name="published_at" class="form-control" value="{{ \Carbon\Carbon::parse($record->published_at)->format('Y-m-d') }}" required>
-</div>
     </div>
     <button type="submit" class="btn btn-primary">Update</button>
 </form>
